@@ -1,0 +1,382 @@
+html,body {
+    margin:0; padding:0;
+    font-size: 10px;
+    height:100%;
+}
+body {
+    font-family:Helvetica;
+    overflow: scroll;
+    overflow-x: auto;
+}
+div,p,ul,li,ol,dl,dt,dd,span,img,input,table,h1,h2,h3,h4,h5,h6 {
+    margin:0; padding:0; border:0; list-style:none; list-style-type:none;
+}
+input,button,select {
+    outline: 0;
+    border:none;
+}
+a {
+    text-decoration: none;
+}
+
+
+/*头部样式*/
+.dsj_header {
+    background-color: #f3f3f3;
+    color:#222;
+}
+.dsj_header>ul {
+    display:flex;
+    justify-content: space-around;
+    height:45px;
+    line-height: 45px;
+}
+.dsj_header>ul li {
+    /*width:20%;*/
+    text-align: center;
+    font-size: 1.5em;
+    /*padding:0 0.5em;*/
+
+}
+.dsj_header>ul a {
+    color:#222;
+    height:100%;
+    display:block;
+   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+    box-sizing: border-box;
+}
+.dsj_header>ul a.cur {
+    border-bottom: none;
+    color: #fca030;
+}
+/*搜索框*/
+.dsj_search {
+    width:100%;
+    margin:1em auto;
+    text-align: center;
+}
+.dsj_search>a {
+    display:block;
+}
+.dsj_search input {
+    height:33px;
+    width:75%;
+    line-height: 33px;
+    box-sizing: border-box;
+    border:1px solid #bebebe;
+    border-radius: 5px;
+    font-size: 1.3em;
+    color:#9b9b9b;
+    padding-left: 2em;
+    padding-right: 1em;
+    background: url("../img/search.png") no-repeat 3px 5px;
+}
+
+/*表格内容主体 */
+.dsj_table {
+    min-height:450px;
+}
+.dsj_table_bg .dsj_thead {
+    background-color: #f6f6f6;
+}
+.dsj_table_bg .dsj_tbody {
+    background-color: #f6f6f6;
+}
+.dsj_thead {
+    font-size: 1.3em;
+    color:#545454;
+    text-align: center;
+}
+.dsj_thead .dsj_tr {
+    height:35px;
+    line-height: 35px;
+}
+.dsj_tbody {
+    font-size: 1.2em;
+    color:#454545;
+    text-align: center;
+}
+.dsj_tbody .dsj_tr {
+    height:42px;
+    line-height: 42px;
+}
+.dsj_tr {
+    border-bottom: 1px solid #ccc;
+    display:flex;
+}
+span.dsj_overflow_hide {
+    display:inline-block;
+    vertical-align: middle;
+    width:3em;
+    text-align: left;
+}
+.dsj_overflow_hide {
+    overflow-x:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.dsj_th_4,.dsj_td_4 {
+    width:25%;
+}
+.dsj_th_5,.dsj_td_5 {
+    width:20%;
+}
+.dsj_th_6,.dsj_td_6 {
+    width:16%;
+}
+.dsj_checkbox {
+    display:inline-block;
+    vertical-align: middle;
+    margin-right: 2px;
+    width:20px;
+    height:20px;
+    border:1px solid #4d4d4d;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+}
+.dsj_checkbox:checked {
+    background:#fff url("../img/checkbox.png") no-repeat -1px 0;
+}
+.dsj_source {
+    position:relative;
+}
+.dsj_title {
+    position:relative;
+    max-width:5em;
+    padding:12px 10px;
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 1.1em;
+    color:#fefefe;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,0.6);
+}
+.dsj_title i {
+    position:absolute;
+    bottom:-16px;
+    left:35px;
+    display:block;
+    width:0;
+    height:0;
+    border:8px solid transparent;
+    border-top-color:rgba(0,0,0,0.6);
+}
+
+/*底部按钮*/
+/*.dsj_btn_box {
+    position:fixed;
+    width:100%;
+    bottom:70px;
+    left:0
+}
+.dsj_btn {
+     float:right;
+     margin-right: 25px;
+     width:70px;
+     height:33px;
+     line-height: 33px;
+     background-color: #45464a;
+     font-size: 1.4em;
+     color:#fffefe;
+     text-align: center;
+     border-radius:4px;
+ }*/
+
+/*数量输入框*/
+.dsj_ok_num {
+    width:44px;
+    height:25px;
+    border:1px solid #666;
+    text-align: center;
+    color:#454545;
+}
+
+/*领取成功页面*/
+.dsj_get_succ {
+    height:49px;
+    line-height: 49px;
+}
+.dsj_get_succ h1 {
+    font-size: 1.5em;
+    color:#282828;
+    font-weight: normal;
+    text-align: center;
+    border-bottom: 1px solid #e07be0;
+}
+.dsj_breeder_ok {
+    display:flex;
+    margin-top: 20px;
+}
+.dsj_a_box>div {
+    width:50%;
+    text-align: center;
+}
+.dsj_a_box>div a {
+    display:block;
+    margin:0 auto;
+    width:109px;
+    height:33px;
+    line-height: 33px;
+    text-align: center;
+    font-size: 1.3em;
+    color:#282828;
+    border:1px solid #212121;
+    border-radius: 3px;
+}
+
+/*领取失败*/
+.dsj_mask {
+    position:fixed;
+    z-index: 998;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    height:100%;
+    background:rgba(0,0,0,0.2);
+    display:block;
+}
+.dsj_alert {
+    width:65%;
+    margin:180px auto;
+    font-size: 1.6em;
+    text-align: center;
+    color:#454545;
+    background-color: #fff;
+    opacity: 1;
+    border-radius: 15px;
+}
+.dsj_alert_title {
+    padding:1.5em 2em 0.5em;
+    border:1px solid #bebebe;
+    line-height: 1.5em;
+}
+.dsj_alert_btn {
+    height:3em;
+    line-height: 3em;
+    color:#454545;
+}
+.dsj_alert_btn a {
+    color:#454545;
+    display:block;
+}
+
+/*搜索页面*/
+.dsj_back {
+    font-size: 1.4em;
+    color:#444;
+    margin-left: 1em;
+}
+.dsj_search_content {
+    border-top: 1px solid #bebebe;
+    padding:10px 23px;
+}
+.dsj_search_head {
+    height:24px;
+    line-height: 24px;
+    font-size: 1.3em;
+    color:#444;
+}
+.dsj_search_late {
+    float:left;
+}
+.dsj_search_clear {
+    float:right;
+    padding:0 .5em;
+    border:1px solid #bebebe;
+    border-radius: 3px;
+}
+.dsj_search_list {
+    font-size: 1.3em;
+    color:#444;
+    margin-top: 10px;
+}
+.dsj_search_item {
+    height:26px;
+    line-height: 26px;
+    width:90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*分页，*/
+.dsj_page {
+    margin-top: 8px;
+    padding:0 120px;
+    overflow: hidden;
+}
+.dsj_page_prev {
+    float:left;
+    font-size: 1.2em;
+    color:#444;
+}
+.dsj_page_next {
+    float:right;
+    font-size: 1.2em;
+    color:#444;
+}
+.dsj_page .dsj_cur {
+    color:#999;
+}
+
+
+
+
+/*模拟页脚*/
+.dsj_footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background-color: #ccc;
+}
+.footer_flex{
+  display: flex;
+  justify-content: space-around;
+}
+.footer_flex a{
+  display:block;
+  width:50%;
+  border-right:1px solid #a3a1a1;
+  box-sizing:border-box;
+  text-decoration: none;
+}
+.footer_flex a:last-child{
+  border: none;
+}
+.footer_flex img{
+  width: 30px;
+  margin: 0 auto;
+  display: block;
+}
+.footer_flex p{
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

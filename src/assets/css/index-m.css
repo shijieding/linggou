@@ -1,0 +1,125 @@
+html,body {
+    margin:0; padding:0;
+    font-size: 10px;
+    height:100%;
+}
+body {
+    font-family:Helvetica;
+    overflow: scroll;
+    overflow-x: auto;
+}
+div,p,ul,li,ol,dl,dt,dd,span,img,input,table,h1,h2,h3,h4,h5,h6 {
+    margin:0; padding:0; border:0; list-style:none; list-style-type:none;
+}
+input,button,select {
+    outline: 0;
+    border:none;
+}
+a {
+    text-decoration: none;
+}
+
+
+/*css*/
+.dsj_head {
+    height:45px;
+    line-height: 45px;
+}
+.dsj_head_container {
+    margin:13px auto;
+    width:229px;
+    overflow:hidden;
+    border:1px solid #fca030;
+    border-radius: 5px;
+    display:flex;
+}
+.dsj_head_container>a {
+    width:50%;
+    text-align: center;
+    height:38px;
+    line-height: 38px;
+    font-size: 15px;
+    color:#222;
+}
+.dsj_head_container>a.cur {
+    background-color: #fca030;
+}
+.dsj_head h1 {
+    padding:0 10px;
+    color:#333;
+    font-size: 14px;
+}
+.dsj_head h1 span {
+    color:#2d2d2d;
+    font-size: 13px;
+}
+.dsj_head h1 i {
+    display:inline-block;
+    vertical-align: middle;
+    width:7px;
+    height:13px;
+    background: url('../img/right.png') no-repeat;
+    transform: translatey(-1px);
+    margin:0 3px;
+}
+.dsj_item {
+    background-color: #f2f2f2;
+    padding:12px;
+    margin-bottom: 10px;
+}
+.dsj_p_head {
+    font-size: 1.1em;
+    color:#575757;
+    height:20px;
+    line-height: 20px;
+}
+.dsj_p_li {
+    font-size: 1.2em;
+    line-height: 22px;
+    height:22px;
+    color:#454545;
+}
+.dsj_p_text {
+    float:left;
+    width:80%;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.dsj_p_num {
+    float:right;
+    width:20%;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: right;
+}
+.dsj_btn_box {
+    margin-top: 10px;
+    overflow: hidden;
+}
+.dsj_btn {
+    width:70px;
+    height:28px;
+    line-height: 28px;
+    text-align: center;
+    background-color: #d1d1d1;
+    border-radius: 4px;
+    font-size: 1.3em;
+}
+.dsj_err {
+    color:#f00;
+    float:left;
+    margin-left: 10px;
+}
+.dsj_succ {
+    color:#0e620d;
+    float:right;
+    margin-right: 10px;
+}
+.red {
+    color:red;
+}
+.green {
+    color:#0e620d;
+}

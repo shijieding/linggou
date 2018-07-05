@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1><a href="http://localhost:8080/#/">123456</a></h1>
+
+<script>
+    let arr = [1,2,3,4,5,4,3];
+    console.log(arr);
+    function fn1 (arr) {
+        let obj = {};
+        let newArr = [];
+        for (let i=0;i<arr.length;i++){
+            if(obj[arr[i]]){
+
+            }else {
+                obj[arr[i]] = 1;
+                newArr.push(arr[i]);
+            }
+        }
+        return newArr;
+    }
+    function fn2 (arr) {
+        let newArr = [];
+        for(let i=0;i<arr.length;i++){
+            if(newArr.indexOf(arr[i]) == -1){
+                newArr.push(arr[i])
+            }
+        }
+        return newArr;
+    }
+    Array.prototype.clearR = fn1;
+    console.log(arr.clearR());
+</script>
+</body>
+</html>
