@@ -30,16 +30,16 @@
     import $ from 'jquery'
     import Load from '@/components/loading'
     import LoadErr from '@/components/loadErr'
-    // let d = document.referrer;
+/*    // let d = document.referrer;
     let d = 'http://wqs.znswsse.com/myfarm#/app_main/farm-nursery';
-    console.log('地址'+d);
+    console.log('地址'+d);*/
 
     export default {
         data() {
             return {
                 showFoot:true,
-                src:d,
-                history:'',
+                // src:d,
+                // history:'',
                 t:'',
                 f:'',
                 screenHeight:'',
@@ -56,6 +56,9 @@
             },
             farmId () {
                 return this.$store.state.farmId;
+            },
+            history () {
+              return this.$store.state.farmSrc;
             }
         },
         created(){
@@ -69,13 +72,13 @@
                     $('div.dsj_footer').show();
                 }
             });
-            this.history = window.localStorage.getItem('history');
+            /*this.history = window.localStorage.getItem('history');
             if(this.history){
                 console.log('已经存在记录')
             }else {
                 window.localStorage.setItem('history',this.src);
                 this.history = window.localStorage.getItem('history');
-            }
+            }*/
 
 
             if(this.$route.query.q_token && this.$route.query.q_farm) {
@@ -86,7 +89,7 @@
             }
             this.getToken();
             this.getFarmId();
-            this.getFarmSrc();
+            // this.getFarmSrc();
         },
         methods:{
             getToken () {
@@ -95,10 +98,10 @@
             getFarmId () {
                 this.$store.commit('getFarmId',this.f);
             },
-            getFarmSrc () {
+/*            getFarmSrc () {
                 console.log(this.src);
                 this.$store.commit('getFarmSrc',this.src);
-            },
+            },*/
             loadShow (bool) {
                 if(bool){
                     this.loading = true;

@@ -6,29 +6,27 @@ const store = new Vuex.Store({
     state:{
         // farmId:'test123',
 
-        token:'f06b17e2dfcc4b6ff0015daafdd80d88',
-        farmId:'5a30b4f8164288115ca4da31',
+        token:'',
+        farmId:'',
         // token:'',
         // farmId:'',
-        farmSrc:''
+        farmSrc:'http://wqs.znswsse.com/myfarm#/app_main/farm-nursery'
     },
     mutations:{
         getToken (state,t) {
             if(t){
-                console.log('store获取token');
                 state.token = t;
             }else {
-                console.log('localstorage获取token');
-                // state.token = window.localStorage.getItem('dsjtoken');
-                state.token = 'f06b17e2dfcc4b6ff0015daafdd80d88';
+                state.token = window.localStorage.getItem('dsjtoken');
+                // state.token = '4cb95146d30037233e98660609a27ae5';
             }
         },
         getFarmId (state,f) {
             if(f){
                 state.farmId = f;
             }else {
-                state.farmId = window.localStorage.getItem('dsjfarmId');
-                state.farmId = '5a30b4f8164288115ca4da31';
+                // state.farmId = window.localStorage.getItem('dsjfarmId');
+                // state.farmId = '5a30b4f8164288115ca4da31';
             }
 
         },

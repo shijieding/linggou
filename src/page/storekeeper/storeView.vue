@@ -33,14 +33,14 @@
     import $ from 'jquery'
     import Load from '@/components/loading'
     import LoadErr from '@/components/loadErr'
-    let d = document.referrer;
+    // let d = document.referrer;
 
     export default {
         data() {
             return {
                 showFoot:true,
-                src:d,
-                history:'',
+                // src:d,
+                // history:'',
                 t:'',
                 f:'',
                 screenHeight:'',
@@ -57,7 +57,10 @@
             },
             farmId () {
                 return this.$store.state.farmId;
-            }
+            },
+          history () {
+            return this.$store.state.farmSrc;
+          }
         },
         created(){
             let htmlHeight = $('body').height()-1;
@@ -70,13 +73,13 @@
                     $('div.dsj_footer').show();
                 }
             });
-            this.history = window.localStorage.getItem('history');
+            /*this.history = window.localStorage.getItem('history');
             if(this.history){
                 console.log('已经存在记录')
             }else {
                 window.localStorage.setItem('history',this.src);
                 this.history = window.localStorage.getItem('history');
-            }
+            }*/
 
 
 
