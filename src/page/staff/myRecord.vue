@@ -11,6 +11,7 @@
                 </li>
                 <li>
                     <a @click="doRequest('2')" v-bind:class="['2'==vFilter?'cur':'']">待收货</a>
+                    <span v-if="num">{{num}}</span>
                 </li>
                 <li>
                     <a @click="doRequest('3')" v-bind:class="['3'==vFilter?'cur':'']">已完成</a>
@@ -96,13 +97,15 @@
                 vFilter:'0',
                 showToast:false,
                 hasNoOrder:false,
-                src:''
+                src:'',
+                num:'',
             }
         },
         components:{
            toast
         },
         created(){
+            this.getNum();
             this.doRequest('0');
         },
         methods:{
@@ -131,11 +134,31 @@
                     this.$emit('loadErrShow',true)
                 });
             },
+            getNum () {
+              this.$emit('loadShow',true);
+              this.$http.get('/storage/'+this.farmId+'/self/orders?otype=2&token='+this.token).then((response) => {
+                this.$emit('loadShow',false)
+                if(response.data.code == 200){
+                  var list = response.data.result;
+                  if(list.length !== 0){
+                    this.num = list.length;
+                  }else {
+                    this.num = '';
+                  }
+                }else {
+                  alert('未知错误，请重新登陆');
+                }
+
+              }).catch(err=>{
+                this.$emit('loadErrShow',true)
+              });
+            },
             confirm (oid) {
                 this.$emit('loadShow',true);
                 this.$http.get('/storage/farm/shippingcart/orderconfirm?orderCode='+oid+'&token='+this.token).then((response)=>{
                     this.$emit('loadShow',false);
                     this.doRequest('2');
+                    this.getNum();
                     this.showToast = true;
                     window.setTimeout(()=>{
                         this.showToast = false;
@@ -150,6 +173,22 @@
 
 <!--<style  type="text/css" src="@/assets/css/index.css"></style>-->
 <style scoped>
+    .dsj_header ul li {
+      position:relative;
+    }
+    .dsj_header ul li span {
+      position:absolute;
+      top:8px;
+      right:-10px;
+      background-color: #fa1f1f;
+      width:12px;
+      height:12px;
+      font-size: 10px;
+      border-radius: 12px;
+      text-align: center;
+      line-height: 12px;
+      color:#fff;
+    }
     .hdg-order-no {
         text-align: center;
         line-height: 50px;

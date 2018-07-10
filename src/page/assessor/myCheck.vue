@@ -21,6 +21,7 @@
             </div>
             <div style="display:flex;flex-direction: row">
                 <div class="" style="flex:7;">
+                    <p class="dsj_p_head" v-if="order.belongUserName">申请人：{{order.belongUserName}}</p>
                     <p class="dsj_p_head">订单编号：{{order.orderCode}}</p>
                     <p class="dsj_p_head">提交时间：{{order.submitTime}}</p>
                     <p class="dsj_p_head" v-if="order.nowState=='审核失败'" style="color:#fca030;">失败原因：{{order.checkLogDesc}}</p>

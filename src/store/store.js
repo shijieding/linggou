@@ -18,14 +18,14 @@ const store = new Vuex.Store({
                 state.token = t;
             }else {
                 state.token = window.localStorage.getItem('dsjtoken');
-                // state.token = '4cb95146d30037233e98660609a27ae5';
+                // state.token = 'dc4baa0e17c6c76c50a2ed9e5e4f11bd';
             }
         },
         getFarmId (state,f) {
             if(f){
                 state.farmId = f;
             }else {
-                // state.farmId = window.localStorage.getItem('dsjfarmId');
+                state.farmId = window.localStorage.getItem('dsjfarmId');
                 // state.farmId = '5a30b4f8164288115ca4da31';
             }
 

@@ -26,6 +26,7 @@
 
                 <div class="good_top">
                     <div class="good_L">
+                        <p class="dsj_p_head" v-if="order.belongUserName">申请人：{{order.belongUserName}}</p>
                         <p>订单编号：<span>{{order.orderCode}}</span></p>
                         <p v-if="order.orderState == '1'">提交时间：<span>{{order.submitTime}}</span></p>
                         <p v-if="order.orderState == '1'">审核时间：<span>{{order.checkTime}}</span></p>
