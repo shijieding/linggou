@@ -12,12 +12,13 @@
                     </div>
                 </div>
                 <div class="bottom flex">
-                    <div class="flex1" @click.stop="setDefault(addr)">
+                    <div class="flex1">
+                      <!--<div class="flex1" @click.stop="setDefault(addr)">-->
                         <div><span class="check" :class="[addr.defaultId?'checked':'']"></span>默认地址</div>
                     </div>
                     <div class="flex1 right">
                         <span style="margin-right: 20px;" @click.stop="write(addr)">编辑</span>
-                        <span @click.stop="clear(addr)">删除</span>
+                        <!--<span @click.stop="clear(addr)">删除</span>-->
                     </div>
                 </div>
             </li>
@@ -25,11 +26,11 @@
         <div style="margin: 20px;text-align: center;" v-if="!hasAddr">
             <p>您还没有添加收货地址！</p>
         </div>
-        <div class="btn-box">
+<!--        <div class="btn-box">
             <div class="btn" @click="goDetail">
                 添加新地址
             </div>
-        </div>
+        </div>-->
         <transition name="fade">
             <div class="alert" v-show="isAlert">
                 <Alert @on-close="myCloseAlert">
