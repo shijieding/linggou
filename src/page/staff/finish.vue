@@ -6,7 +6,7 @@
             </div>
             <div class="btn-box">
                 <router-link to="/staffView/product">继续领取商品</router-link>
-                <a :href="history">返回我的猪场</a>
+                <a :href="src">返回我的猪场</a>
             </div>
         </div>
     </div>

@@ -17,16 +17,16 @@ const store = new Vuex.Store({
             if(t){
                 state.token = t;
             }else {
-                state.token = window.localStorage.getItem('dsjtoken');
-                // state.token = 'dc4baa0e17c6c76c50a2ed9e5e4f11bd';
+                // state.token = window.localStorage.getItem('dsjtoken');
+                state.token = '89b41064531c9cd9a8874a39f3b4fee8';
             }
         },
         getFarmId (state,f) {
             if(f){
                 state.farmId = f;
             }else {
-                state.farmId = window.localStorage.getItem('dsjfarmId');
-                // state.farmId = '5a30b4f8164288115ca4da31';
+                // state.farmId = window.localStorage.getItem('dsjfarmId');
+                state.farmId = '5a30b4f8164288115ca4da31';
             }
 
         },
