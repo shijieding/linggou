@@ -18,7 +18,7 @@ const store = new Vuex.Store({
                 state.token = t;
             }else {
                 // state.token = window.localStorage.getItem('dsjtoken');
-                state.token = '89b41064531c9cd9a8874a39f3b4fee8';
+                state.token = 'ffa0cb38cf1cab519b7a1d3d73e56008';
             }
         },
         getFarmId (state,f) {
@@ -26,7 +26,7 @@ const store = new Vuex.Store({
                 state.farmId = f;
             }else {
                 // state.farmId = window.localStorage.getItem('dsjfarmId');
-                state.farmId = '5a30b4f8164288115ca4da31';
+                state.farmId = '5a5d584b16428803c0c82f13';
             }
 
         },

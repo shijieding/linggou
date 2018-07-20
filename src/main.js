@@ -57,7 +57,7 @@ window.alert = function(msg, callback) {
 };
 
 Axios.defaults.baseURL="http://wqs.znswsse.com/fg/storage/farmStorage/";
-// Axios.defaults.baseURL="http://192.168.1.108:5567/";
+// Axios.defaults.baseURL="http://192.168.1.118:5567/";
 Axios.defaults.timeout = 10000;
 Axios.defaults.headers={
     // "userId":'123',

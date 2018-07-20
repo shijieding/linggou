@@ -136,6 +136,7 @@
                     this.closeD();
                 }).catch(err=>{
                     this.$emit('loadErrShow',true);
+                    this.$emit('loadShow',false);
                 })
             },
             downProduct (id) {
@@ -150,6 +151,7 @@
                     this.closeD();
                 }).catch(err=>{
                     this.$emit('loadErrShow',true);
+                    this.$emit('loadShow',false);
                 })
             },
             writeQuantity (state) {
